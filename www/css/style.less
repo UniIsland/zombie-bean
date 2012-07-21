@@ -11,10 +11,9 @@ body {
 	overflow: visible;
 }
 .header {
-	.size(200px, 830px);
-	margin-left: -35px;
-	background: transparent url("../img/header-circles_830.png") 0 100% no-repeat;
+	.size(200px, 100%);
 	.opacity(60);
+	background: transparent url("../img/header-circles_830.png") 50% 100% no-repeat;
 
 	.banner {
 		width: @pageWidth;
@@ -24,7 +23,7 @@ body {
 .container {
 	width: 100%;
 	box-sizing: border-box;
-	background: rgba(255,255,255,.2);
+	background: rgba(255,255,255,.1);
 	border-radius: 50px;
 	padding: 20px 30px;
 	margin-top: 15px;
@@ -38,9 +37,10 @@ body {
 		@width: 600px;
 		.size(@height, @width);
 		margin: 0 auto;
+		background-color: #111;
 
 		.mask {
-			.size(10px, 100%);
+			.size(10px, 0%);
 			float: left;
 			overflow: hidden;
 			.border-radius(10px);
@@ -65,9 +65,13 @@ body {
 
 	.slide {
 		//.size(100%, 100%);
-		.size(350px, 100%);
+		.size(360px, 100%);
+		box-sizing: border-box;
 
 		h2 { font-weight: bold; }
+		.option {
+			cursor: pointer;
+		}
 
 		&.start {
 			h2 { padding: 0 10px; margin-bottom: 30px; }
@@ -75,20 +79,26 @@ body {
 			.option {
 				float: left;
 				width: 50%;
-				height: 150px;
 				font-size: 30px;
-				padding: 30px;
 				box-sizing: border-box;
 				text-align: center;
+
+				.icon {
+					.square(250px);
+					margin: 0 auto 20px;
+					border-radius: 10px;
+				}
+				.icon.games { background-image: url("../img/enter_games_250.png"); }
+				.icon.apps { background-image: url("../img/enter_apps_250.png"); margin-left: 20px;  }
 			}
 		}
 		&.cls1 {
-			h2 { text-align: center; padding: 20px 0; }
+			h2 { text-align: center; padding: 30px 0 0; }
 
 			.option {
 				float: left;
 				width: 45%;
-				height: 200px;
+				height: 270px;
 				border-radius: 20px;
 				overflow: hidden;
 
@@ -100,10 +110,13 @@ body {
 				float: left;
 				width: 10%;
 				text-align: center;
-				padding: 70px 0;
+				padding: 140px 0 0;
+				font-size: 44px;
 			}
 		}
 		&.cls2 {
+			padding: 40px;
+
 			h2 { text-align: left; }
 
 			.options {
@@ -111,23 +124,32 @@ body {
 				padding: 0 80px;
 			}
 			.option {
-				padding: 10px 20px;
+				margin: 20px 0;
+				padding: 0 0 0 30px;
+				background: transparent url("../img/dot_white_20.png") 0 0px no-repeat;
+				font-size: 20px;
 			}
 		}
 		&.end {
+			.options {
+				margin-top: 30px;
+			}
 			.app {
 				float: left;
 				border-radius: 10px;
 				box-sizing: border-box;
-				background: rgba(255,255,255,.9);
+				background: rgba(255,255,255,1);
 				box-shadow: 0px 3px 10px rgba(0,0,0,.7);
-				.size(200px, 160px);
+				.size(260px, 180px);
 				margin-right: 20px;
+				padding: 20px;
+				color: black;
 
 				h3 {
 					font-size: 18px;
 					font-weight: bold;
 					padding: 10px 2px;
+					color: #444;
 				}
 				.icon {
 					padding: 5px;
@@ -135,19 +157,20 @@ body {
 					border: 1px solid #d7d7d7;
 					background: #ededed;
 					border-radius: 2px;
+					overflow: visible;
 					.square(72px);
 
 					img { .square(72px); }
 				}
 				.desc {
 					font-size: 13px;
-					.size(40px, 100%);
-					overflow: hidden;
+					.size(58px, 100%);
+					overflow-y: scroll;
 				}
 				.install {
 					.size(30px, 101px);
 					margin: 10px auto 0;
-					background: transparent url(/style/images/wdj/detail_sprite.png?v=0502301) no-repeat 0 0;
+					background: transparent url("../img/install_button.png") no-repeat 0 0;
 
 					&:hover { background-position-y: -30px; }
 					&:active { background-position-y: -60px; }
