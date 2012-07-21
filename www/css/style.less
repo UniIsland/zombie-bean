@@ -1,17 +1,59 @@
 // site common styles
 @import "site/site.less";
 
+body {
+	background: black;
+}
+
+.content {
+	width: @pageWidth;
+	margin: 0 auto;
+	overflow: visible;
+}
 .header {
-	.size(100px, 100%);
+	.size(200px, 830px);
+	margin-left: -35px;
+	background: transparent url("../img/header-circles_830.png") 0 100% no-repeat;
+	.opacity(60);
 
 	.banner {
 		width: @pageWidth;
 		margin: 0 auto;
 	}
 }
-.content {
-	width: @pageWidth;
-	margin: 0 auto;
+.container {
+	width: 100%;
+	box-sizing: border-box;
+	background: rgba(255,255,255,.2);
+	border-radius: 50px;
+	padding: 20px 30px;
+	margin-top: 15px;
+	color: white;
+}
+.progress {
+	margin-top: 15px;
+
+	.bar {
+		@height: 10px;
+		@width: 600px;
+		.size(@height, @width);
+		margin: 0 auto;
+
+		.mask {
+			.size(10px, 100%);
+			float: left;
+			overflow: hidden;
+			.border-radius(10px);
+			.background-clip(border-box);
+		}
+
+		img {
+			.size(@height, @width + 80px);
+			position: relative;
+			top: -5px;
+			left: -40px;
+		}
+	}
 }
 .footer {
 	width: @pageWidth;
@@ -19,10 +61,98 @@
 }
 
 .questionnaire {
-	padding: 50px 100px;
+	padding: 50px 50px;
 
 	.slide {
 		//.size(100%, 100%);
-		.size(300px, 100%);
+		.size(350px, 100%);
+
+		h2 { font-weight: bold; }
+
+		&.start {
+			h2 { padding: 0 10px; margin-bottom: 30px; }
+
+			.option {
+				float: left;
+				width: 50%;
+				height: 150px;
+				font-size: 30px;
+				padding: 30px;
+				box-sizing: border-box;
+				text-align: center;
+			}
+		}
+		&.cls1 {
+			h2 { text-align: center; padding: 20px 0; }
+
+			.option {
+				float: left;
+				width: 45%;
+				height: 200px;
+				border-radius: 20px;
+				overflow: hidden;
+
+				img {
+					.size(100%, 100%);
+				}
+			}
+			.separator {
+				float: left;
+				width: 10%;
+				text-align: center;
+				padding: 70px 0;
+			}
+		}
+		&.cls2 {
+			h2 { text-align: left; }
+
+			.options {
+				margin: 20px 0;
+				padding: 0 80px;
+			}
+			.option {
+				padding: 10px 20px;
+			}
+		}
+		&.end {
+			.app {
+				float: left;
+				border-radius: 10px;
+				box-sizing: border-box;
+				background: rgba(255,255,255,.9);
+				box-shadow: 0px 3px 10px rgba(0,0,0,.7);
+				.size(200px, 160px);
+				margin-right: 20px;
+
+				h3 {
+					font-size: 18px;
+					font-weight: bold;
+					padding: 10px 2px;
+				}
+				.icon {
+					padding: 5px;
+					margin: 0 auto;
+					border: 1px solid #d7d7d7;
+					background: #ededed;
+					border-radius: 2px;
+					.square(72px);
+
+					img { .square(72px); }
+				}
+				.desc {
+					font-size: 13px;
+					.size(40px, 100%);
+					overflow: hidden;
+				}
+				.install {
+					.size(30px, 101px);
+					margin: 10px auto 0;
+					background: transparent url(/style/images/wdj/detail_sprite.png?v=0502301) no-repeat 0 0;
+
+					&:hover { background-position-y: -30px; }
+					&:active { background-position-y: -60px; }
+				}
+			}
+		}
 	}
 }
