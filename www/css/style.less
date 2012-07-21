@@ -179,3 +179,67 @@ body {
 		}
 	}
 }
+
+.background {
+	width: 732px;
+	background: #000;
+	padding: 1px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.background-mask {
+	width: 734px;
+	height: 500px;
+	background: #333;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.9;
+	z-index: 10;
+}
+.icon {
+	float: left;
+	width: 63px;
+	height: 63px;
+	margin: -1px;
+	position: relative;
+	overflow: hidden;
+	
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+	.front {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 6px 6px 4px;
+		z-index: 900;
+
+		-webkit-transform: rotateX(0deg) rotateY(0deg);
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
+		-webkit-transition: all .4s ease-in-out;
+		border: 1px solid #ccc;
+	}
+	.back {
+		border: 1px solid #ccc;
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 6px 6px 4px;
+		z-index: 800;
+		-webkit-transform: rotateX(-180deg);
+		-webkit-transform-style: preserve-3d;
+		-webkit-backface-visibility: hidden;
+		-webkit-transition: all .4s ease-in-out;
+	}
+	&.flip {
+		.front {
+			-webkit-transform: rotateX(180deg);
+		}
+		.back {
+			z-index: 1000;
+			-webkit-transform: rotateX(0deg) rotateX(0deg);
+		}
+	}
+}
