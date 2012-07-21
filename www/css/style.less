@@ -79,7 +79,7 @@ body {
 		top: 50px;
 		left: 50px;
 		-webkit-transition: all 0.8s;
-		-webkit-transform: translateZ(-300px);
+		-webkit-transform: scale(0.7);
 
 		h2 { font-weight: bold; }
 		.option, .entrance {
@@ -87,15 +87,16 @@ body {
 		}
 
 		&.faraway {
-			-webkit-transform: translateZ(-3000px);
+			-webkit-transform: scale(0.5);
 			-webkit-transition: all 2s;
 		}
 		&.present, &.faraway.present {
-			-webkit-transform: translateZ(0px);
+			-webkit-transform: scale(1);
 			opacity: 1;
 		}
 		&.present.fadingout, &.faraway.present.fadingout {
-			-webkit-transform: translateZ(600px);
+			-webkit-transform: scale(10);
+			opacity: 0;
 			-webkit-transition: all 0.8s;
 		}
 		&.start {
