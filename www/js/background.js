@@ -66,4 +66,8 @@ $(function() {
 	}
 	moveHand()
 	moveHand()
+	$('#back-to-start').on('click', function(ev) {
+		ev.preventDefault()
+		location.reload()
+	})
 })
