@@ -8,7 +8,14 @@
 <script src="js/less.js" type="text/javascript"></script>
 <script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/underscore.js" type="text/javascript"></script>
+
 <script src="js/background.js" type="text/javascript"></script>
+
+<script src="js/games.js" type="text/javascript"></script>
+<script src="js/apps.js" type="text/javascript"></script>
+<script src="js/q1.js" type="text/javascript"></script>
+<script src="js/questionnaire.js" type="text/javascript"></script>
+>>>>>>> question transition, with bugs
 </head>
 <body>
 	<div class="background"></div>
@@ -24,72 +31,69 @@
 				</div>
 			</div>
 			<div class="questionnaire">
-				<div class="slide start">
+				<div class="slide start faraway">
 					<h2>Aloha~ 你在找什么呢？</h2>
 					<div>
-						<div class="option">
+						<div class="entrance" data-catagory='0'>
 							<div class="icon games"></div>
 							游戏
 						</div>
-						<div class="option">
+						<div class="entrance" data-catagory='1'>
 							<div class="icon apps"></div>
 							应用
 						</div>
 					</div>
 					<div class="tip"></div>
 				</div>
-				<div class="slide cls1">
-					<div>
-						<div class="option">
-							<img src="http://cssglobe.com/images/authors/cssglobe.jpg" />
-						</div>
-						<div class="separator">&amp;</div>
-						<div class="option">
-							<img src="http://cssglobe.com/images/authors/cssglobe.jpg" />
-						</div>
-					</div>
-					<h2>哪幅图片中的场景你更喜欢？</h2>
-				</div>
-				<div class="slide cls2">
-					<h2>如果地球毁灭，你认为更有可能是因为什么？</h2>
-					<div class="options">
-						<div class="option">选项1</div>
-						<div class="option">选项选项选项选项选项选项2</div>
-						<div class="option">选项3</div>
-					</div>
-				</div>
-				<div class="slide end">
-					<h2>大功告成，最适合你的一款已经找到了，就在下面这三个里啦。你能猜到是哪一个么？</h2>
-					<div class="options">
-						<div class="app">
-							<div class="icon">
-								<img src="http://img.wdjimg.com/app/icon3/bda781c8cfa8f60e8a771ee6f851fef7_72.png" />
-							</div>
-							<h3>阿里旺旺</h3>
-							<div class="desc">阿里旺旺 是将原先的淘宝旺旺与阿里巴巴贸易通整合在一起的新品牌。它是淘宝和阿里巴巴为商人度身定做的免费网上商务沟通软件。它能帮您轻松找客户，发布、管理商业信息；及时把握商机，随时洽谈做生意！并详细讲述了阿里旺旺在中国市场的发展。</div>
-							<div class="install"><a href="#"></a></div>
-						</div>
-						<div class="app">
-							<div class="icon">
-								<img src="http://img.wdjimg.com/app/icon3/bda781c8cfa8f60e8a771ee6f851fef7_72.png" />
-							</div>
-							<h3>阿里旺旺</h3>
-							<div class="desc">阿里旺旺 是将原先的淘宝旺旺与阿里巴巴贸易通整合在一起的新品牌。它是淘宝和阿里巴巴为商人度身定做的免费网上商务沟通软件。它能帮您轻松找客户，发布、管理商业信息；及时把握商机，随时洽谈做生意！并详细讲述了阿里旺旺在中国市场的发展。</div>
-							<div class="install"><a href="#"></a></div>
-						</div>
-						<div class="app">
-							<div class="icon">
-								<img src="http://img.wdjimg.com/app/icon3/bda781c8cfa8f60e8a771ee6f851fef7_72.png" />
-							</div>
-							<h3>阿里旺旺</h3>
-							<div class="desc">阿里旺旺 是将原先的淘宝旺旺与阿里巴巴贸易通整合在一起的新品牌。它是淘宝和阿里巴巴为商人度身定做的免费网上商务沟通软件。它能帮您轻松找客户，发布、管理商业信息；及时把握商机，随时洽谈做生意！并详细讲述了阿里旺旺在中国市场的发展。</div>
-							<div class="install"><a href="#"></a></div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</div>
 		<div class="footer"></div>
 	</div>
+<script type="text/template" id="template-question">
+	<% if (question.type == 1) { %>
+				<div class="slide cls1">
+					<div>
+						<div class="option" data-tag="<%= question.filter[0][0] %>" data-filter="<%= question.filter[0][1] %>">
+							<img src="<%= question.options[0] %>" />
+						</div>
+						<div class="separator">&amp;</div>
+						<div class="option" data-tag="<%= question.filter[1][0] %>" data-filter="<%= question.filter[1][1] %>">
+							<img src="<%= question.options[1] %>" />
+						</div>
+					</div>
+					<h2><%= question.text %></h2>
+	<% } else { %>
+				<div class="slide cls2">
+					<h2><%= question.text %></h2>
+					<div class="options">
+						<% _.each(question.options, function(option, idx) { %>
+						<div class="option" data-tag="<%= question.filter[idx][0] %>" data-filter="<%= question.filter[idx][1] %>"><%= option %></div>
+						<% }); %>
+					</div>
+	<% } %>
+				</div>
+</script>
+<script type="text/template" id="template-result">
+				<div class="slide result">
+					<h2>大功告成，最适合你的一款已经找到了，就在下面这三个里啦。你能猜到是哪一个么？</h2>
+					<div class="options">
+						<% _.each(apps, function(app) { %>
+						<div class="app">
+							<div class="icon">
+								<img src="<%= app.img_url %>" />
+							</div>
+							<h3><%= app.name %></h3>
+							<div class="desc"><%= app.description %></div>
+							<div class="install"><a href="<%= app.download_url %>"></a></div>
+						</div>
+						<% }); %>
+					</div>
+				</div>
+</script>
+<script type="text/javascript">
+$(function() {
+	Questionnaire.initialize();
+});
+</script>
 </body>
 </html>

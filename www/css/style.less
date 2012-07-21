@@ -8,6 +8,7 @@ body {
 .content {
 	width: @pageWidth;
 	margin: 0 auto;
+	padding-bottom: 50px;
 	overflow: visible;
 }
 .header {
@@ -62,21 +63,43 @@ body {
 
 .questionnaire {
 	padding: 50px 50px;
+	min-height: 460px;
+	position: relative;
+	//overflow: hidden;
+	-webkit-perspective: 600px;
 
 	.slide {
 		//.size(100%, 100%);
-		.size(360px, 100%);
+		.size(360px, 600px);
 		box-sizing: border-box;
+		position: absolute;
+		opacity: 0;
+		top: 50px;
+		left: 50px;
+		-webkit-transition: all 0.8s;
+		-webkit-transform: translateZ(-300px);
 
 		h2 { font-weight: bold; }
 		.option {
 			cursor: pointer;
 		}
 
+		&.faraway {
+			-webkit-transform: translateZ(-3000px);
+			-webkit-transition: all 2s;
+		}
+		&.present, &.faraway.present {
+			-webkit-transform: translateZ(0px);
+			opacity: 1;
+		}
+		&.present.fadingout, &.faraway.present.fadingout {
+			-webkit-transform: translateZ(600px);
+			-webkit-transition: all 0.8s;
+		}
 		&.start {
-			h2 { padding: 0 10px; margin-bottom: 30px; }
+			h2 { padding: 0 0 0 10px; margin-bottom: 30px; }
 
-			.option {
+			.entrance {
 				float: left;
 				width: 50%;
 				font-size: 30px;
@@ -130,7 +153,7 @@ body {
 				font-size: 20px;
 			}
 		}
-		&.end {
+		&.result {
 			.options {
 				margin-top: 30px;
 			}
