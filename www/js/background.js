@@ -2,10 +2,10 @@ $(function() {
 	var tIcon = _.template('\
 				<div class="icon">\
 					<div class="front">\
-						<img src="./img/appicons/icon_<%=a%>.png" alt="" />\
+						<img src="<%=a%>" alt="" />\
 					</div>\
 					<div class="back">\
-						<img src="./img/appicons/icon_<%=b%>.png" alt="" />\
+						<img src="<%=b%>" alt="" />\
 					</div>\
 				</div>')
 	window.tIcon = tIcon
@@ -16,13 +16,14 @@ $(function() {
 	var showNum = 96
 	var j = Math.floor(Math.random() * showNum)
 	for (i = 0; i < showNum; i++) {
-		html += tIcon({a: 30, b: 30})
+		html += tIcon({a: iconsbase64[30], b: iconsbase64[30]})
 	}
 	var hiddenImgs = []
 	var $icons = $(html)
 	$icons.find('.front img').each(function(i, el) {
 		a = j++ % iconNum + 1
-		$(el).attr('src', './img/appicons/icon_'+a+'.png')
+		$(el).attr('src', iconsbase64[a])
+			.data('imgid', a)
 	}).end().appendTo($background)
 	for (i = 0; i < 20; i++) {
 		a = j++ % iconNum + 1
@@ -34,9 +35,13 @@ $(function() {
 		var n = Math.floor(Math.random() * showNum)
 		var $icon = $icons.eq(n)
 		var $imgShowing = $icon.find($icon.hasClass('flip') ? '.back img' : '.front img')
-		var imgId = parseInt($imgShowing.attr('src').match(/icon_(\d{1,3})\.png/)[1], 10)
+		//var imgId = parseInt($imgShowing.attr('src').match(/icon_(\d{1,3})\.png/)[1], 10)
+		var imgId = $imgShowing.data('imgid')
 		hiddenImgs.push(imgId)
-		$icon.find($icon.hasClass('flip') ? '.front img' : '.back img').attr('src', './img/appicons/icon_'+hiddenImgs.shift()+'.png')
+		var $imgToBeShow = $icon.find($icon.hasClass('flip') ? '.front img' : '.back img')
+		var idx = hiddenImgs.shift()
+		$imgToBeShow.attr('src', iconsbase64[idx])
+		$imgToBeShow.data('imgid', idx)
 		$icon.toggleClass('flip')
 	}
 	function randomFlip() {
