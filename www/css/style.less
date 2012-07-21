@@ -64,18 +64,26 @@ body {
 }
 
 .questionnaire {
-	padding: 50px 50px 0;
-	min-height: 400px;
+	padding: 30px 40px 0px;
+	min-height: 420px;
 	position: relative;
 	//overflow: hidden;
 	-webkit-perspective: 600px;
+	overflow: hidden;
+	.icon, .option {
+		&:hover {
+			.box-shadow(0 0 20px -2px #ff9);
+			.border-radius()
+		}
+	}
 
 	.slide {
 		//.size(100%, 100%);
-		.size(380px, 600px);
+		.size(390px, 600px);
 		box-sizing: border-box;
 		position: absolute;
 		opacity: 0;
+		overflow: hidden;
 		top: 50px;
 		left: 50px;
 		-webkit-transition: all 0.8s;
@@ -111,7 +119,7 @@ body {
 
 				.icon {
 					.square(250px);
-					margin: 0 auto 20px;
+					margin: 20px auto;
 					border-radius: 10px;
 				}
 				.icon.games { background-image: url("../img/enter_games_250.png"); }
@@ -127,6 +135,7 @@ body {
 				height: 270px;
 				border-radius: 20px;
 				overflow: hidden;
+				margin: 5px;
 
 				img {
 					.size(100%, 100%);
@@ -134,7 +143,7 @@ body {
 			}
 			.separator {
 				float: left;
-				width: 10%;
+				width: 40px;
 				text-align: center;
 				padding: 140px 0 0;
 				font-size: 44px;
@@ -150,7 +159,7 @@ body {
 				padding: 0 80px;
 			}
 			.option {
-				margin: 20px 0;
+				margin: 20px 5px;
 				padding: 0 0 0 30px;
 				background: transparent url("../img/dot_white_20.png") 0 0px no-repeat;
 				font-size: 20px;
