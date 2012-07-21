@@ -24,7 +24,6 @@ window.Questionnaire = {
 	},
 	prepare_questionnaire: function(catagory) {
 		catagory = parseInt(catagory);
-		console.log(catagory);
 		this.candidate_apps = _.clone(this.apps[catagory]);
 		this.candidate_questions = _.shuffle(this.questions[catagory]);
 		this.update_progress(0);
@@ -43,13 +42,13 @@ window.Questionnaire = {
 	},
 	next_question: function(starting) {
 		var question = this.candidate_questions.shift();
-		console.log(question);
-		$(this.tpl_question({ question: question })).appendTo(this.$div);
-		var $cur_slide = $('.present', this.$div).addClass('fadingout')
-			.next().addClass('present')
-			.end();
-		if (starting) this.$start_slide = $cur_slide.removeClass('present').removeClass('fadingout');
+		var $next_slide = $(this.tpl_question({ question: question })).appendTo(this.$div);
+		var $cur_slide = $('.present', this.$div).addClass('fadingout');
+		setTimeout(function(){
+			$next_slide.addClass('present');
+		}, 100);
 		setTimeout(function() {
+			if (starting) this.$start_slide = $cur_slide.removeClass('present').removeClass('fadingout');
 			$cur_slide.remove();
 		}, 1000);
 	},
@@ -60,7 +59,7 @@ window.Questionnaire = {
 			return app.tags[tag] == filter;
 		});
 		if (result.length < 7) {
-			this.end(_.shuffle(result).slice(0,2));
+			this.end(_.shuffle(result).slice(0,3));
 			return;
 		}
 		this.candidate_apps = result;
@@ -74,10 +73,11 @@ window.Questionnaire = {
 	},
 	end: function(result) {
 		this.update_progress(1);
-		$(this.tpl_result({ apps: result })).appendTo(this.$div);
+		var $next_slide = $(this.tpl_result({ apps: result })).appendTo(this.$div);
 		var $cur_slide = $('.present', this.$div).addClass('fadingout')
-			.next().addClass('present')
-			.end()
+		setTimeout(function(){
+			$next_slide.addClass('present');
+		}, 100);
 		setTimeout(function() {
 			$cur_slide.remove();
 		}, 1000);
