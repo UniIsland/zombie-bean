@@ -70,7 +70,7 @@ window.Q1 = [
 	filter:[[6,0],[5,0]]},
 
 	{type:"1",
-	options:["img/q1/q1/15_1.jpg","img/q1/15_2.jpg"],
+	options:["img/q1/15_1.jpg","img/q1/15_2.jpg"],
 	text:"这两张图片你喜欢哪张？",
 	filter:[[1,0],[4,0]]},
 
