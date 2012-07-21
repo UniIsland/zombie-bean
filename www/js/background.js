@@ -16,7 +16,7 @@ $(function() {
 	var showNum = 96
 	var j = Math.floor(Math.random() * showNum)
 	for (i = 0; i < showNum; i++) {
-		html += tIcon({a: 1, b: 1})
+		html += tIcon({a: 30, b: 30})
 	}
 	var hiddenImgs = []
 	var $icons = $(html)
