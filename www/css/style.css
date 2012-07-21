@@ -1,0 +1,479 @@
+/* Reset.less
+ * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
+ * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+html,
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+b,
+abbr,
+acronym,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dd,
+dl,
+dt,
+li,
+ol,
+ul,
+fieldset,
+form,
+label,
+legend,
+button,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-style: normal;
+  /*line-height: 1;*/
+
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ol,
+ul,
+li {
+  list-style: none;
+}
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover,
+a:active {
+  outline: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+}
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+audio:not([controls]) {
+  display: none;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+button,
+input {
+  line-height: normal;
+  *overflow: visible;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+div {
+  overflow: auto;
+}
+/* Variables.less
+ * Variables to customize the look and feel of Bootstrap
+ * ----------------------------------------------------- */
+/* Mixins.less
+ * Snippets of reusable CSS to develop faster and keep code readable
+ * ----------------------------------------------------------------- */
+/*----------------------------the following code is writed by wys---------------------------------------*/
+body {
+  background: #000d11;
+}
+.content {
+  width: 760px;
+  margin: 90px auto 0;
+  padding-bottom: 10px;
+  overflow: visible;
+  position: relative;
+}
+.header {
+  height: 200px;
+  width: 100%;
+  filter: alpha(opacity=60);
+  -khtml-opacity: 0.6;
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.header .banner {
+  width: 760px;
+  margin: 0 auto;
+}
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 50px;
+  padding: 0px 30px;
+  margin-top: 15px;
+  color: white;
+  position: relative;
+  z-index: 10;
+}
+.progress {
+  margin-top: 15px;
+}
+.progress .bar {
+  height: 10px;
+  width: 600px;
+  margin: 0 auto;
+  background-color: #111;
+}
+.progress .bar .mask {
+  height: 10px;
+  width: 0%;
+  float: left;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: border-box;
+  -moz-background-clip: border-box;
+  background-clip: border-box;
+}
+.progress .bar img {
+  height: 10px;
+  width: 680px;
+  position: relative;
+  top: -5px;
+  left: -40px;
+}
+.footer {
+  width: 760px;
+  margin: 0 auto;
+}
+.questionnaire {
+  padding: 20px 40px 0px;
+  min-height: 470px;
+  position: relative;
+  -webkit-perspective: 600px;
+  overflow: hidden;
+}
+.questionnaire .icon:hover,
+.questionnaire .option:hover {
+  -webkit-box-shadow: 0 0 20px -2px #ffff99;
+  -moz-box-shadow: 0 0 20px -2px #ffff99;
+  box-shadow: 0 0 20px -2px #ffff99;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+.questionnaire .slide {
+  height: 390px;
+  width: 600px;
+  box-sizing: border-box;
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  top: 50px;
+  left: 50px;
+  -webkit-transition: all 0.8s;
+  -webkit-transform: scale(0.7);
+}
+.questionnaire .slide h2 {
+  font-weight: bold;
+}
+.questionnaire .slide .option,
+.questionnaire .slide .entrance {
+  cursor: pointer;
+}
+.questionnaire .slide.faraway {
+  -webkit-transform: scale(0.5);
+  -webkit-transition: all 2s;
+}
+.questionnaire .slide.present,
+.questionnaire .slide.faraway.present {
+  -webkit-transform: scale(1);
+  opacity: 1;
+}
+.questionnaire .slide.present.fadingout,
+.questionnaire .slide.faraway.present.fadingout {
+  -webkit-transform: scale(10);
+  opacity: 0;
+  -webkit-transition: all 0.8s;
+}
+.questionnaire .slide.start h2 {
+  padding: 0 0 0 30px;
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+.questionnaire .slide.start .entrance {
+  float: left;
+  width: 50%;
+  font-size: 30px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.questionnaire .slide.start .entrance .icon {
+  height: 250px;
+  width: 250px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+.questionnaire .slide.start .entrance .icon.games {
+  background-image: url("../img/enter_games_250.png");
+}
+.questionnaire .slide.start .entrance .icon.apps {
+  background-image: url("../img/enter_apps_250.png");
+  margin-left: 20px;
+}
+.questionnaire .slide.cls1 h2 {
+  text-align: center;
+  padding: 30px 0 0;
+}
+.questionnaire .slide.cls1 .option {
+  float: left;
+  width: 45%;
+  height: 270px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 5px;
+}
+.questionnaire .slide.cls1 .option img {
+  height: 100%;
+  width: 100%;
+}
+.questionnaire .slide.cls1 .separator {
+  float: left;
+  width: 40px;
+  text-align: center;
+  padding: 140px 0 0;
+  font-size: 44px;
+}
+.questionnaire .slide.cls2 {
+  padding: 50px;
+  margin-top: 70px;
+}
+.questionnaire .slide.cls2 h2 {
+  text-align: left;
+}
+.questionnaire .slide.cls2 .options {
+  margin: 20px 0;
+  padding: 0 80px;
+}
+.questionnaire .slide.cls2 .option {
+  margin: 20px 5px;
+  padding: 0 0 0 30px;
+  background: transparent url("../img/dot_white_20.png") 0 0px no-repeat;
+  font-size: 20px;
+}
+.questionnaire .slide.result .options {
+  margin-top: 30px;
+}
+.questionnaire .slide.result .app {
+  float: left;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.7);
+  height: 260px;
+  width: 180px;
+  margin-right: 20px;
+  padding: 16px;
+  color: #000d11;
+}
+.questionnaire .slide.result .app h3 {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 2px;
+  color: #444;
+}
+.questionnaire .slide.result .app .icon {
+  padding: 5px;
+  margin: 0 auto;
+  border: 1px solid #d7d7d7;
+  background: #ededed;
+  border-radius: 2px;
+  overflow: visible;
+  height: 72px;
+  width: 72px;
+}
+.questionnaire .slide.result .app .icon img {
+  height: 72px;
+  width: 72px;
+}
+.questionnaire .slide.result .app .desc {
+  font-size: 13px;
+  height: 58px;
+  width: 100%;
+  text-overflow: clip;
+}
+.questionnaire .slide.result .app .install {
+  height: 30px;
+  width: 101px;
+  margin: 10px auto 0;
+  background: transparent url("../img/install_button.png") no-repeat 0 0;
+}
+.questionnaire .slide.result .app .install:hover {
+  background-position-y: -30px;
+}
+.questionnaire .slide.result .app .install:active {
+  background-position-y: -60px;
+}
+.questionnaire .slide.result .app .install a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.background {
+  width: 732px;
+  background: #000d11;
+  padding: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  margin-left: 10px;
+}
+.background .icon {
+  float: left;
+  width: 63px;
+  height: 63px;
+  margin: -1px;
+  position: relative;
+  overflow: hidden;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+}
+.background .icon .front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px 6px 4px;
+  z-index: 900;
+  -webkit-transform: rotatex(0deg) rotatey(0deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.4s ease-in-out;
+  border: 1px solid #ccc;
+}
+.background .icon .back {
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px 6px 4px;
+  z-index: 800;
+  -webkit-transform: rotatex(-180deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+.background .icon.flip .front {
+  -webkit-transform: rotatex(180deg);
+}
+.background .icon.flip .back {
+  z-index: 1000;
+  -webkit-transform: rotatex(0deg) rotatex(0deg);
+}
+.background-mask {
+  margin-left: 10px;
+  width: 734px;
+  height: 600px;
+  position: absolute;
+  top: -80px;
+  left: 0;
+  z-index: 10;
+  opacity: 0.6;
+  background: rgba(0, 13, 17, 0.9) url("../img/bgmask.png") center top no-repeat;
+}
