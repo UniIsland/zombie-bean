@@ -10,6 +10,7 @@ body {
 	margin: 0 auto;
 	padding-bottom: 50px;
 	overflow: visible;
+	position: relative;
 }
 .header {
 	.size(200px, 100%);
@@ -24,11 +25,12 @@ body {
 .container {
 	width: 100%;
 	box-sizing: border-box;
-	background: rgba(255,255,255,.1);
 	border-radius: 50px;
 	padding: 20px 30px;
 	margin-top: 15px;
 	color: white;
+	position: relative;
+	z-index:10;
 }
 .progress {
 	margin-top: 15px;
@@ -70,7 +72,7 @@ body {
 
 	.slide {
 		//.size(100%, 100%);
-		.size(360px, 600px);
+		.size(380px, 600px);
 		box-sizing: border-box;
 		position: absolute;
 		opacity: 0;
@@ -210,59 +212,59 @@ body {
 	position: absolute;
 	top: 0;
 	left: 0;
+	.icon {
+		float: left;
+		width: 63px;
+		height: 63px;
+		margin: -1px;
+		position: relative;
+		overflow: hidden;
+		
+		-webkit-perspective: 600px;
+		-moz-perspective: 600px;
+		.front {
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 6px 6px 4px;
+			z-index: 900;
+
+			-webkit-transform: rotateX(0deg) rotateY(0deg);
+			-webkit-transform-style: preserve-3d;
+			-webkit-backface-visibility: hidden;
+			-webkit-transition: all .4s ease-in-out;
+			border: 1px solid #ccc;
+		}
+		.back {
+			border: 1px solid #ccc;
+			position: absolute;
+			top: 0;
+			left: 0;
+			padding: 6px 6px 4px;
+			z-index: 800;
+			-webkit-transform: rotateX(-180deg);
+			-webkit-transform-style: preserve-3d;
+			-webkit-backface-visibility: hidden;
+			-webkit-transition: all .4s ease-in-out;
+		}
+		&.flip {
+			.front {
+				-webkit-transform: rotateX(180deg);
+			}
+			.back {
+				z-index: 1000;
+				-webkit-transform: rotateX(0deg) rotateX(0deg);
+			}
+		}
+	}
 }
 .background-mask {
 	width: 734px;
 	height: 500px;
-	background: #333;
+	background: #111;
 	position: absolute;
 	top: 0;
 	left: 0;
-	opacity: 0.9;
+	opacity: 0.8;
 	z-index: 10;
-}
-.icon {
-	float: left;
-	width: 63px;
-	height: 63px;
-	margin: -1px;
-	position: relative;
-	overflow: hidden;
-	
-	-webkit-perspective: 600px;
-	-moz-perspective: 600px;
-	.front {
-		position: absolute;
-		top: 0;
-		left: 0;
-		padding: 6px 6px 4px;
-		z-index: 900;
-
-		-webkit-transform: rotateX(0deg) rotateY(0deg);
-		-webkit-transform-style: preserve-3d;
-		-webkit-backface-visibility: hidden;
-		-webkit-transition: all .4s ease-in-out;
-		border: 1px solid #ccc;
-	}
-	.back {
-		border: 1px solid #ccc;
-		position: absolute;
-		top: 0;
-		left: 0;
-		padding: 6px 6px 4px;
-		z-index: 800;
-		-webkit-transform: rotateX(-180deg);
-		-webkit-transform-style: preserve-3d;
-		-webkit-backface-visibility: hidden;
-		-webkit-transition: all .4s ease-in-out;
-	}
-	&.flip {
-		.front {
-			-webkit-transform: rotateX(180deg);
-		}
-		.back {
-			z-index: 1000;
-			-webkit-transform: rotateX(0deg) rotateX(0deg);
-		}
-	}
 }
