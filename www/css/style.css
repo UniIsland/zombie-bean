@@ -422,7 +422,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.6;
+  opacity: 0.2;
   margin-left: 10px;
 }
 .background .icon {
@@ -466,6 +466,16 @@ body {
   z-index: 1000;
   -webkit-transform: rotatex(0deg) rotatex(0deg);
 }
+#roundhand {
+  -webkit-transition: all 0.2s ease-in-out;
+  z-index: 5;
+  width: 382px;
+  height: 420px;
+  position: absolute;
+  top: -200px;
+  left: -50px;
+  background: transparent url("../img/roundhand.png") left top no-repeat;
+}
 .background-mask {
   margin-left: 10px;
   width: 734px;
@@ -475,5 +485,5 @@ body {
   left: 0;
   z-index: 10;
   opacity: 0.6;
-  background: rgba(0, 13, 17, 0.9) url("../img/bgmask.png") center top no-repeat;
+  background: transparent url("../img/bgmask.png") center top no-repeat;
 }

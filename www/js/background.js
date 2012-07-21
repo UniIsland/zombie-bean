@@ -56,4 +56,14 @@ $(function() {
 	randomFlip()
 	randomFlip()
 	randomFlip()
+	var $roundhand = $('#roundhand')
+	var moveHand = function moveHand() {
+		var n = Math.floor(Math.random() * 4000) + 2000
+		var top = (Math.floor(Math.random() * 100) + -300).toString() + 'px'
+		var left = (Math.floor(Math.random() * 20) + -60).toString() + 'px'
+		$roundhand.css({top: top, left: left})
+		setTimeout(moveHand, n)
+	}
+	moveHand()
+	moveHand()
 })
