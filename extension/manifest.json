@@ -3,8 +3,9 @@
     "version": "0.0.1",
     "manifest_version": 2,
     "description": "Personalized App Recommendation",
+    "icons": { "72": "logo.png" },
     "app": {
-	"urls": [
+		"urls": [
 		    "*://zombie-bean.planetb612.info/*"
 		],
 		"launch": {
