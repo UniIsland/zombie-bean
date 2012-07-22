@@ -1,4 +1,5 @@
 window.Questionnaire = {
+	step_count: 0,
 	initialize: function() {
 		this.$div = $('.questionnaire');
 		this.$progress = $('.progress');
@@ -60,8 +61,12 @@ window.Questionnaire = {
 		var result = _.filter(this.candidate_apps, function(app) {
 			return app.tags[tag] == filter;
 		});
-		if (result.length < 7) {
-			this.end(_.shuffle(result).slice(0,3));
+		if (++ this.step_count > 6 || result.length < 7 ) {
+			if (result.length < 3) {
+				this.end(_.shuffle(this.candidate_apps).slice(0,3));
+			} else {
+				this.end(_.shuffle(result).slice(0,3));
+			}
 			return;
 		}
 		this.candidate_apps = result;
