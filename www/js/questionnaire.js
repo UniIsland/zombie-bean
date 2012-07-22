@@ -1,7 +1,8 @@
 window.Questionnaire = {
 	initialize: function() {
 		this.$div = $('.questionnaire');
-		this.$progress = $('.progress .mask');
+		this.$progress = $('.progress');
+		this.$progress_mask = $('.mask', this.$progress);
 		this.tpl_question = _.template($('#template-question').html());
 		this.tpl_result = _.template($('#template-result').html());
 
@@ -32,12 +33,13 @@ window.Questionnaire = {
 	update_progress: function(reset) {
 		if (reset == 0) {
 			this.percentage = 100;
-			this.$progress.width('0%');
+			this.$progress.css({ visibility: "visible" });
+			this.$progress_mask.width('0%');
 		} else if (reset == 1) {
-			this.$progress.width('100%');
+			this.$progress.css({ visibility: "hidden" });
 		} else {
 			this.percentage = this.percentage * 0.667;
-			this.$progress.animate({ width: (100 - this.percentage) + '%' });
+			this.$progress_mask.animate({ width: (100 - this.percentage) + '%' });
 		}
 	},
 	next_question: function(starting) {
