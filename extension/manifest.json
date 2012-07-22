@@ -4,6 +4,10 @@
     "manifest_version": 2,
     "description": "让多啦A梦的“圆”手从豌豆荚百宝袋里拿出一个又一个有趣、实用的 App，帮助你完美解决选择障碍～",
     "icons": { "72": "logo.jpg" },
+    "content_scripts": [{
+        "matches": ["http://zombie-bean.planetb612.info/*"],
+        "js": []
+    }],
     "app": {
 		"urls": [
 		    "*://zombie-bean.planetb612.info/*"
