@@ -154,6 +154,78 @@ window.Apps = [
 	description:"一个锻炼听力的有丰富资源的英语学习软件.内含2000多个英语音频文件.来自全国各地的网上朋友组成资源创作团队.每天都在不断地增加更多的听力专辑.",
 	download_url:"http://img.yingyonghui.com/apk/324551/com.jinbu.application.1342541099935.apk",
 	img_url:"http://img.wdjimg.com/app/icon3/bbbfae02e811634fd648026b068bfa12_72.png",
-	tags:[0,1,0,0,1,0,0,1,1,1,0,0]}
+	tags:[0,1,0,0,1,0,0,1,1,1,0,0]},
+
+	{
+		name:"布丁优惠券",
+		description:"布丁优惠，手机上的折扣生活。布丁优惠券'直接出示、无需打印',全国精品连锁餐饮电子折扣券，一千万布丁用户真挚推荐。您只需奔往最近的美食餐厅，柜台出示手机优惠券图片，即可立即省钱享用美餐。简单致用、惠无纸境，再也不用到处搜刮纸质券了！",
+		download_url:"http://cdn2.down.apk.gfan.com/asdf/Pfiles/2012/7/13/158317_e1882dab-3253-4e66-b7b2-3b78bb77a990.apk",
+		img_url:"http://img.wdjimg.com/app/icon3/8ca784ae09385d5dcc1a7761eb87ee03_72.png",
+		tags:[0,0,1,1,0,0,0,1,0,0,0,1]
+	},
+	{
+		name:"百思不得姐",
+		description:"姐寂寞的时候会写语录，姐渴望的时候会发照片。想知道姐的寂寞吗？想了解姐的渴望吗？你若敢靠近姐，姐就敢注意你；你若敢关心姐，姐就敢担心你；你若敢拿真心，姐就敢接受你；你若敢喜欢姐，姐就敢爱上你！ 你百思不得骑姐，但你百撕可得骑姐。每天随时随地更新姐的语录，让你随时随地爽到不行！姐的Fans 过百万了，还不快来关注姐？ 潇洒的人生，跟姐混吧！",
+		download_url:"file:///Users/tao/Downloads/05501a62-3b1a-4c70-f842-d77af15bdfa8.apk",
+		img_url:"http://img.wdjimg.com/app/icons/0/8e/d09e6d536067aa434f3f7798969f68e0_48x48nq2.png",
+		tags:[0,0,0,0,0,0,0,0,1,1,0,1]
+	},
+	{
+		name:"墨迹天气皮肤",
+		description:"4X2，4X1插件全支持！简约而不失高贵，大气而不繁琐，将原先的翻页更加细微化，使时钟有了完美的展现。",
+		download_url:"file:///Users/tao/Downloads/com.mojichina.weather.skin49_2.apk",
+		img_url:"http://img.wdjimg.com/app/icon3/820a55f719db827ff9198b192574fa2f_72.png",
+		tags:[0,0,1,0,0,0,1,0,0,1,0,1]
+	},
+	{
+		name:"蚂蜂窝旅行",
+		description:"旅游攻略由蚂蜂窝旅行网原创打造，蚂蜂窝为旅游爱好者提供精美实用的旅游攻略，内有详细的吃、住、行、景点、线路、实用信息，还有网友提供的照片和感受。",
+		download_url:"http://static.nduoa.com/apk/338/338009/1055158/com.mfw.roadbook.apk",
+		img_url:"http://img.wdjimg.com/app/icon3/5210b06c0fd4e3cfd568c21cc238dcd2_72.png",
+		tags:[0,1,1,0,1,0,0,0,0,1,0,0]
+	},
+	{
+		name:"谷歌星空",
+		description:"GoogleSkyMap如同一个微型的天文望远镜,带你仰望星空,探寻宇宙的神秘之处.",
+		download_url:"http://down1.app.uc.cn/pack/2011/12/14/googlesky_1.6.4.apk",
+		img_url:"http://img.wdjimg.com/app/icon3/11752edb53390fee669eb64e82f42feb_72.png",
+		tags:[0,1,1,0,0,0,0,0,0,1,0,1]
+	},
+	{
+		name:"扫描全能王",
+		description:"扫描全能王CamScanner将手机变成便携随身扫描器,方便快捷地记录管理您的各种文档，收据，笔记和白板讨论等.并通过智慧精准的图像裁剪和图像增强演算法，保证您扫描的内容清晰可读。",
+		download_url:"http://gamecache.3g.cn/software/softfile/201206/22166/CamScanner_v1_42_337.apk?fr=wdj&fid=26914",
+		img_url:"http://img.wdjimg.com/app/icon3/e994dc5782adf9fea65e774de0e1dd35_72.png",
+		tags:[1,0,0,1,0,0,0,1,0,0,0,0]
+	},
+	{
+		name:"名片全能王",
+		description:"名片全能王是一款功能强大的名片识别软件，能够快速扫描并读取名片图像上的所有联系人资讯，然后将识别结果作为联系人记录保存到手机电话本以及名片管理中。同时还具备邮件签名识别，QR code 生成并识别，Excel 导出等功能。",
+		download_url:"http://218.249.165.44/download/27910527/35453052/2/apk/35/251/1340209996579_763/com.intsig.BizCardReader.1340176259400.apk",
+		img_url:"http://img.wdjimg.com/app/icon3/64ba61afc50d21914fc70479eec34791_72.png",
+		tags:[1,0,0,1,0,0,0,1,0,0,1,0]
+	},
+	{
+		name:"金山WPS Office",
+		description:"金山WPS Office手机版是金山公司推出的、运行于Android平台上的全功能办公软件，国内同类产品排名第一，Google官方Android市场排名领先。用户遍布全世界200多个国家和地区。方便用户在手机和平板上使用，满足您随时随地办公的需求。",
+		download_url:"http://static.nduoa.com/apk/380/380180/1097369/cn.wps.moffice.apk",
+		img_url:"http://img.wdjimg.com/app/icon3/870032f203ffbcbfa136828999a1ce0c_72.png",
+		tags:[1,0,0,1,0,0,0,0,0,1,0,0]
+	},
+	{
+		name:"Office 办公套件",
+		description:"DocumentsToGo 需同步下载安装DocumentsToGo key，使用新版增加了幻灯片的编辑、阅读以及 PDF 阅读两大功能，是目前 Android 平台上最好用的办公软件，保留了原版的 Word 文档和 Excel 表格的阅读与编辑，对文档作复制、粘贴、插入等各种编辑动作。",
+		download_url:"http://img.yingyonghui.com/apk/78/com.dataviz.docstogo.1335947862280.apk",
+		img_url:"http://img.wdjimg.com/app/icon3/bb299c7260377182325f9a930e13b281_72.png",
+		tags:[1,0,0,1,0,0,0,0,0,1,0,0]
+	},
+	{
+		name:"SketchBook",
+		description:"这款专业级别的绘图工具带有极其丰富的触笔和各色工具，比如铅笔、喷咀、油画笔、原子笔、甚至填充效果等等，非常实用!",
+		download_url:"http://d1.eoemarket.com/201207221330/6602c705e8ae91c78356ef8e4e3e3366/upload/2012/0515/apps/24670/apks/199111/15179938-b708-df58-abee-62a8b095deae.apk",
+		img_url:"http://img.wdjimg.com/app/icon3/2f953c9584894257b49e88baca63fa7d_72.png",
+		tags:[1,1,0,0,0,0,0,0,1,0,0,0]
+	}
+
 
 ];
