@@ -1,8 +1,8 @@
 {
-    "name": "Zombie Bean",
+    "name": "伸出圆手",
     "version": "0.0.1",
     "manifest_version": 2,
-    "description": "Personalized App Recommendation",
+    "description": "让多啦A梦的“圆”手从豌豆荚百宝袋里拿出一个又一个有趣、实用的 App，帮助你完美解决选择障碍～",
     "icons": { "72": "logo.jpg" },
     "app": {
 		"urls": [
