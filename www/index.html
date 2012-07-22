@@ -83,7 +83,7 @@
 							</div>
 							<h3><%= app.name %></h3>
 							<div class="desc"><%= app.description %></div>
-							<div class="install"><a href="<%= app.download_url %>"></a></div>
+							<div class="install"><a href="<%= app.download_url %>#download=package_<%= app.download_url.slice(-6,-4) %>.apk"></a></div>
 						</div>
 						<% }); %>
 					</div>
