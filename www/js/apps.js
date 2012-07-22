@@ -1,13 +1,13 @@
 window.Apps = [
 	{name:"Pocket",
-	description:"一款支持离线网页阅读的实用工具，是典型的网页同步的云端应用。Read It Later可以让你将要阅读或者一时没有读完的网页标记下来，接着同步到服务器端，然后你就可以在不同的设备上阅读。",
+	description:"一款支持离线网页阅读的实用工具，是典型的网页同步的云端应用。",
 	download_url:"http://www.appchina.com/market/d/4575/wdj.direct_0/package.apk",
 	img_url:"http://img.wandoujia.com/app/icons/d/9f/22f9f63eecfd3bc6929dcb90b5f809fd_48x48nq2.png",
 	tags:[0,1,0,1,1,0,0,1,1,1,0,0]},
 
 
 	{name:"Recordoid",
-	description:"安卓录音笔，让你的手机变成一款录音设备，无论是上课还是采访，还有自己的笔记，都可以迅速收录。",
+	description:"安卓录音笔，让你的手机变成一款录音设备，无论是上课还是采访...",
 	download_url:"http://file.m.163.com/app/free/201111/13/com.somyac.recordoid.dictaphone_17.apk",
 	img_url:"http://img.wdjimg.com/app/icons/7/a5/3f2f59b19a0866c3749cafe694f1ba57_48x48nq2.png",
 	tags:[1,1,0,1,0,0,0,1,0,0,0,0]},
@@ -139,7 +139,7 @@ window.Apps = [
 	tags:[0,1,0,0,1,0,0,0,1,1,0,0]},
 
 	{name:"教你摺纸",
-	description:"今天为大家推荐的这款游戏就是教你如何折纸，游戏里共有18中物品的折叠方法，包括兔子、鸽子、长颈鹿等等，快来学习一下吧！"
+	description:"今天为大家推荐的这款游戏就是教你如何折纸，游戏里共有18中物品的折叠方法，包括兔子、鸽子、长颈鹿等等，快来学习一下吧！",
 	download_url:"http://file.m.163.com/app/free/201207/17/com.mobilicos.howtomakeorigami-7.apk",
 	img_url:"http://img.wdjimg.com/app/icon3/45b3dd5e9377b347460ba1bd63905273_72.png",
 	tags:[0,0,0,0,0,0,0,0,1,1,0,1]},
